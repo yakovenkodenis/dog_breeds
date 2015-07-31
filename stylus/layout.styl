@@ -1,0 +1,63 @@
+vendor-prefix ?= webkit moz official
+support-for-ie ?= true
+@import 'nib'
+@import 'functions'
+
+reset-html5()
+
+*
+	box-sizing border-box
+	font-family 'Raleway'
+	
+body
+	padding 0
+	margin 0
+
+.hidden
+	display none
+
+section.slider
+	img
+		position relative
+		height auto
+		width 100%
+		max-width 100%
+		
+	h2
+		color #FFF
+		font-weight lighter
+		font-size 3em   
+		position absolute
+		top 200px
+		left 0
+		margin 10px
+		padding 10px
+		background rgba(26, 188, 156, .5)
+
+a
+	text-decoration none
+	
+.container
+	text-align center
+	> section.main
+		margin 0 auto
+	
+section.main
+	
+	background #999 
+
+	.dog-image
+		display inline-block
+		border 2px solid #f00
+		padding 15px
+		margin 20px
+
+		img
+			width 300px
+			height 300px
+			display block
+			border 2px solid #fff
+			border-radius 50%
+
+		figcaption
+			text-align center 

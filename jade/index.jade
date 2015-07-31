@@ -1,0 +1,18 @@
+extends header
+
+block content
+	.container
+		h1 Hello World!!!
+
+		section.main
+			h6.hidden Dog breeds
+			- var arr=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+			- for (var i = 0; i < 10; i++)
+					figure.dog-image
+						a(href='#')
+							p: img(src='images/1.jpg')
+							figcaption This is a super dog.
+
+
+	include footer
+		
