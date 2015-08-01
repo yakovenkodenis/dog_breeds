@@ -4,6 +4,8 @@ support-for-ie ?= true
 @import 'rupture'
 @import 'functions'
 
+rupture.enable-em-breakpoints = true
+
 normalize-html5()
 
 *
@@ -18,8 +20,9 @@ body
 
 .hidden
     display none
-    
+
 header
+    transition all 0.2s ease-in-out
     z-index 999
     color #fff 
     background-color rgba(0, 0, 0, .8)
@@ -30,26 +33,34 @@ header
     text-align left
     
     &:before
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        width: 0;
-        margin-right: -.25em;
-        height: 100%; 
+        content ""
+        display inline-block
+        vertical-align middle
+        width 0
+        margin-right -.25em
+        height 100%
     
-    .header 
-        display: inline;
-        vertical-align: middle;
-        white-space: normal;
+    .header
+        display inline
+        vertical-align middle
+        white-space normal
         padding-left 4px    
         a
             font-weight lighter
             color #fff
-            transition: .3s color ease,
-                        .3s filter ease,
-                        .3s -webkit-filter ease
+            cursor pointer
+            transition: .2s color ease,
+                        .2s filter ease,
+                        .2s -webkit-filter ease
+            .title
+                transition: .2s color ease
+                
+                &:hover
+                    color #1abc9c
+
             &:hover
                 color #1abc9c
+                
                 img
                     webkit-filter brightness(-80%)
                     filter: brightness(-80%)
@@ -94,6 +105,9 @@ header
             -webkit-filter invert(100%)
             filter invert(100%)
             cursor pointer
+            
+.nav-up
+    top -2.5em
 
 section.slider
     img
@@ -115,6 +129,12 @@ section.slider
 
 a
     text-decoration none
+    color #000
+    font-size 1.2em 
+    transition .3s all ease-out
+
+    &:hover
+        color #1abc9c
     
 .container
     text-align center
@@ -131,6 +151,19 @@ a
     height 16em 
     background rgba(0, 0, 0, .5)
     margin -600px 30% !important
+    
+    +between(900px, 1300px)
+        width 40em !important
+        height 12.3em 
+        margin -450px 6% !important
+        padding 20px 20px !important
+        
+        #name
+            width 32em !important
+        #email, #submit
+            width 33.5em !important
+        #submit
+            margin-top 5.99em !important
     
     +mobile()
         width 20em !important

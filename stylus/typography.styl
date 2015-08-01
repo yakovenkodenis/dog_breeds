@@ -1,1 +1,51 @@
+@import 'rupture'
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,200,300)
+
+rupture.enable-em-breakpoints = true
+
+article
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    text-align justify
+    
+    +between(900px, 1300px)
+        max-width 1000px
+        
+    +between(399px, 699px)
+        text-align justify
+        margin-top 5em 
+        line-height 1.2 
+        max-width 510px
+        font-size .7em
+        span.bold
+            font-weight bold  
+            font-size 1em
+    +mobile()
+        text-align justify
+        margin-top 8em 
+        line-height 1.2 
+        max-width 410px
+        font-size .7em
+        span.bold
+            font-weight bold  
+            font-size 1em
+        
+span.bold
+    font-size 2.1em
+    line-height 1.8 
+
+.intro-text,
+span.bold
+    -webkit-hyphens auto
+    -moz-hyphens auto
+    -ms-hyphens auto
+    hyphens auto
+    font-family 'Georgia', serif 
+
+.intro-text
+    margin-top 5px 
+    font-size 2em
+    line-height 1.7 
+    color #333333
+    margin 50px
