@@ -1,57 +1,75 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <title>GreatDog</title>
-  <link rel="stylesheet" href="stylesheets/main.css">
-</head>
-<body>
-  <header>
-    <div class="header">This is my header!</div>
-  </header>
-  <section class="slider"><img src="images/header2.jpg">
-    <h2>Here is the main title of the page</h2>
-  </section>
-  <div class="container">
-    <h1>Hello World!!!</h1>
-    <section class="main">
-      <h6 class="hidden">Dog breeds</h6>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
-      <figure class="dog-image"><a href="#">
-          <p><img src="images/1.jpg"></p>
-          <figcaption>This is a super dog.</figcaption></a></figure>
+<html manifest="default.appcache">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="true" name="HandheldFriendly">
+    <title>GreatDog</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="header"><a href="#"><img src="images/icons/dog.png" class="logo">Dogs</a>
+        <nav>
+          <ul>
+            <li><a href="#"><img src="images/icons/home.png" class="logo"></a></li>
+            <li><a href="#"><img src="images/icons/search.png" class="logo"></a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="slider"><img src="images/header2.jpg">
+      <div class="form">
+        <form id="signup-form">
+          <input id="name" placeholder="Your name..." tabindex="1">
+          <input id="email" placeholder="Your email..." tabindex="2">
+          <button id="submit">Sign up</button>
+        </form>
+      </div>
     </section>
-  </div>
-  <footer class="row">
-    <div class="footer col-12">This is my footer!</div>
-    <p>
-      Yakovenko Inc. <br>
-      &copy; 2015, All Rights Reserved
-    </p>
-  </footer>
-</body>
+    <div class="container">
+      <h1>Hello World!!!</h1>
+      <section class="main">
+        <h6 class="hidden">Dog breeds</h6>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+        <figure class="dog-image"><a href="#">
+            <p><img src="images/1.jpg"></p>
+            <figcaption>This is a super dog.</figcaption></a></figure>
+      </section>
+    </div>
+    <footer class="row">
+      <div class="footer col-12">This is my footer!</div>
+      <p>
+        Yakovenko Inc. <br>
+        &copy; 2015, All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>

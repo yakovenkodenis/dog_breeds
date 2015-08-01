@@ -1,63 +1,291 @@
 vendor-prefix ?= webkit moz official
 support-for-ie ?= true
 @import 'nib'
+@import 'rupture'
 @import 'functions'
 
-reset-html5()
+normalize-html5()
 
 *
-	box-sizing border-box
-	font-family 'Raleway'
-	
+    box-sizing border-box
+    font-family 'Raleway', Arial, sans-serif
+    
 body
-	padding 0
-	margin 0
+    padding 0
+    margin 0
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale 
 
 .hidden
-	display none
+    display none
+    
+header
+    z-index 999
+    color #fff 
+    background-color rgba(0, 0, 0, .8)
+    width 100%
+    height 2.5em
+    font-size 1.5em
+    position fixed
+    text-align left
+    
+    &:before
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        margin-right: -.25em;
+        height: 100%; 
+    
+    .header 
+        display: inline;
+        vertical-align: middle;
+        white-space: normal;
+        padding-left 4px    
+        a
+            font-weight lighter
+            color #fff
+            transition: .3s color ease,
+                        .3s filter ease,
+                        .3s -webkit-filter ease
+            &:hover
+                color #1abc9c
+                img
+                    webkit-filter brightness(-80%)
+                    filter: brightness(-80%)
+            &:first-child
+                font-size 1.3em
+
+        nav ul
+            list-style-type none
+            margin-top -50px
+
+            li
+                display inline
+ 
+                &:first-child
+                    padding-left 80%
+                    
+                    +from-width(1000px)
+                        padding-left 75%
+                        
+                    +between(400px, 999px)
+                        padding-left 70%
+                        
+                    +between(399px, 699px)
+                        padding-left 60% 
+                    
+                    +mobile()
+                        padding-left 30%
+                        
+                    +above(1400px)
+                        padding-left 83% 
+
+                &:last-child a
+                    font-size 1em 
+                    border 1px solid #1abc9c
+                    padding 7px 15px
+                    margin-left 10px
+
+        .logo
+            margin-right 10px
+            height auto
+            padding 0 0 0 1%
+            -webkit-filter invert(100%)
+            filter invert(100%)
+            cursor pointer
 
 section.slider
-	img
-		position relative
-		height auto
-		width 100%
-		max-width 100%
-		
-	h2
-		color #FFF
-		font-weight lighter
-		font-size 3em   
-		position absolute
-		top 200px
-		left 0
-		margin 10px
-		padding 10px
-		background rgba(26, 188, 156, .5)
+    img
+        position relative
+        height auto
+        width 100%
+        max-width 100%
+        
+    h2
+        color #FFF
+        font-weight lighter
+        font-size 3em   
+        position absolute
+        top 200px
+        left 0
+        margin 10px
+        padding 10px
+        background rgba(26, 188, 156, .5)
 
 a
-	text-decoration none
-	
+    text-decoration none
+    
 .container
-	text-align center
-	> section.main
-		margin 0 auto
-	
+    text-align center
+    > section.main
+        margin 0 auto
+
+.form
+    position relative
+
+#signup-form
+    position absolute 
+    display block     
+    width 40em
+    height 16em 
+    background rgba(0, 0, 0, .5)
+    margin -600px 30% !important
+    
+    +mobile()
+        width 20em !important
+        height 12.3em 
+        margin -120px 6% !important
+        padding 20px 20px !important
+        
+        #name
+            width 14em !important
+        #email, #submit
+            width 15.5em !important
+        #submit
+            margin-top 5.99em !important
+            
+    +tablet()
+        width 50em !important
+        height 12.3em 
+        margin -400px 6% !important
+        padding 20px 20px !important
+        
+        #name
+            width 40.5em !important
+        #email, #submit
+            width 42em !important
+        #submit
+            margin-top 5.99em !important
+            
+    +between(400px, 999px)
+        width 40em !important
+        height 12.3em 
+        margin -320px 6% !important
+        padding 20px 20px !important
+        
+        #name
+            width 32em !important
+        #email, #submit
+            width 33.5em !important
+        #submit
+            margin-top 5.99em !important
+            
+    +between(399px, 699px)
+        width 34.5em !important
+        height 12.3em 
+        margin -300px 6% !important
+        padding 20px 20px !important
+        
+        #name
+            width 27em !important
+        #email, #submit
+            width 28.5em !important
+        #submit
+            margin-top 5.99em !important
+    #name,
+    #email
+        position absolute
+        display: block
+        margin: 0
+        width: 28.5em
+        font-family: sans-serif
+        font-size: 18px
+        appearance: none
+        box-shadow: none
+        border-radius: none
+        padding: 10px;
+        border: solid 3px #969696
+        transition: border 0.3s;
+        
+        &:nth-child(2)
+            margin-top 3em 
+            width 30em 
+
+        &:focus
+            outline none
+            border: solid 3px #1abc9c
+            
+    #submit
+        position relative
+        display: inline-block;
+        padding: 15px 45px;
+        font-size: 18px
+        width 30em
+        height 50px 
+        margin-top 20%
+        appearance: none;
+        box-shadow: none;
+        border-radius: 0;
+        color #fff 
+        background-color #1abc9c
+        border solid 3px #969696
+        transition all .3s ease
+        
+        &:focus
+            outline: none
+            
+        &:hover
+            border solid 3px #1abc9c
+            
+        &:active
+            background-color #1abc84
+            border solid 3px #969696
+    
+    +from-width(1000px)
+        padding 50px
+        margin -500px 45% 
+        
+    +between(400px, 999px)
+        padding 50px
+        margin -500px 45%
+        
+    +between(399px, 699px)
+        padding 50px
+        margin -500px 45%
+    
+    +mobile()
+        padding 50px
+        margin -100px -20px
+        
+        #name
+            width 250px 
+        
+        
+    +above(1400px)
+        padding 50px
+        margin -500px 45%
+    
+    #name
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-appearance: textfield;
+    
+    #submit
+        -webkit-appearance: button;
+        cursor: pointer;
+        
+        &::-moz-focus-inner
+            padding: 0;
+            border: 0;
+
+    
 section.main
-	
-	background #999 
+    // background #999 
 
-	.dog-image
-		display inline-block
-		border 2px solid #f00
-		padding 15px
-		margin 20px
+    .dog-image
+        display inline-block
+        // border 2px solid #f00
+        padding 15px
+        margin 20px
 
-		img
-			width 300px
-			height 300px
-			display block
-			border 2px solid #fff
-			border-radius 50%
+        img
+            width 300px
+            height 300px
+            display block
+            border 2px solid #fff
+            border-radius 50%
 
-		figcaption
-			text-align center 
+        figcaption
+            text-align center

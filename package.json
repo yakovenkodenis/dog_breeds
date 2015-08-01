@@ -27,6 +27,7 @@
     "gulp-stylus": "~2.0.6",
     "gulp-express": "~0.3.5",
     "connect-livereload": "~0.5.3",
-    "nib": "~1.1.0"
+    "nib": "~1.1.0",
+    "rupture": "~0.6.1"
   }
 }

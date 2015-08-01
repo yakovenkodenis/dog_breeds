@@ -2,6 +2,7 @@ var gulp 		= require('gulp'),
 	coffee 		= require('gulp-coffee'),
 	stylus 		= require('gulp-stylus'),
 	nib 		= require('nib'),
+	rupture		= require('rupture'),
 	csso		= require('gulp-csso'),
 	jade 		= require('gulp-jade'),
 	concat 		= require('gulp-concat'),
@@ -20,7 +21,8 @@ gulp.task('stylus', function() {
 			compress: 		true,
 			'include css': 	true,
 			use: [
-				nib()
+				nib(),
+				rupture()
 			]
 		}) )
 		.pipe( csso() )

@@ -1,14 +1,27 @@
 doctype
-head
-	meta(charset="UTF-8")
-	title GreatDog
-	link(rel='stylesheet' href='stylesheets/main.css')
-body
-	header
-		.header This is my header!
+html(manifest='default.appcache')
+    head
+        meta(charset='UTF-8')
+        meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport')
+        meta(content='true' name='HandheldFriendly')
+        title GreatDog
+        link(rel='stylesheet' href='stylesheets/main.css')
+    body
+        header
+            .header
+                a(href='#')
+                    img.logo(src='images/icons/dog.png')
+                    | Dogs
+                nav: ul
+                    li: a(href='#')
+                        img.logo(src='images/icons/home.png')
+                    li: a(href='#')
+                        img.logo(src='images/icons/search.png')
+                    li: a(href='#') Sign In
 
-	section.slider
-		img(src='images/header2.jpg')
-		h2 Here is the main title of the page
 
-	block content
+        section.slider
+            img(src='images/header2.jpg')
+            include signup-form
+
+        block content
