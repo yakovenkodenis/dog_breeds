@@ -8,7 +8,7 @@ var gulp 		= require('gulp'),
 	concat 		= require('gulp-concat'),
 	gutil 		= require('gulp-util'),
 	uglify		= require('gulp-uglify')
-	es			= require('event-stream'),
+	es		= require('event-stream'),
 	express		= require('express'),
 	livereload	= require('gulp-livereload'),
 	path		= require('path'),
@@ -18,7 +18,7 @@ gulp.task('stylus', function() {
 	return gulp.src('stylus/main.styl')
 		.pipe( stylus({
 			whitespace: 	true,
-			compress: 		true,
+			compress: 	true,
 			'include css': 	true,
 			use: [
 				nib(),
@@ -90,4 +90,4 @@ gulp.task('watch', function() {
 
 // Default task
 gulp.task('default', ['coffee', 'stylus', 'jade',
-					  'express', 'watch', 'livereload']);
+		      'express', 'watch', 'livereload']);
