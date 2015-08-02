@@ -60,11 +60,6 @@ header
             transition: .2s color ease,
                         .2s filter ease,
                         .2s -webkit-filter ease
-            .title
-                transition: .2s color ease
-                
-                &:hover
-                    color #1abc9c
 
             &:hover
                 color #1abc9c
@@ -106,13 +101,19 @@ header
                     padding 7px 15px
                     margin-left 10px
 
-        .logo
-            margin-right 10px
-            height auto
-            padding 0 0 0 1%
-            -webkit-filter invert(100%)
-            filter invert(100%)
-            cursor pointer
+.title
+    transition: .2s color ease
+    
+    &:hover
+        color #1abc9c
+
+.logo
+    margin-right 10px
+    height auto
+    padding 0 0 0 1%
+    -webkit-filter invert(100%)
+    filter invert(100%)
+    cursor pointer
             
 .nav-up
     top -2.5em
@@ -330,3 +331,75 @@ section.main
 
         figcaption
             text-align center
+
+
+
+.footer
+    margin-top 40px
+    bottom 0
+    position relative
+    display inline-block
+    width 100%
+    font-weight lighter
+    color #fff
+    background rgba(0, 0, 0, .9)
+    height 100%
+    font-size 1.5em
+    vertical-align middle
+    
+    p
+        line-height 1.5 
+    
+    p.author
+        position absolute
+        display inline-block
+        right 0
+        margin-right 10px
+        font-size .8em
+    
+
+    p.rights-reserved
+        text-align center
+        font-size .7em
+        padding-top 1em
+
+    a
+        position absolute
+        padding 17px 10px 
+        float left
+        margin-right -.25em
+        height 100%
+
+        span
+            color #fff
+            
+    +between(200px, 999px)
+        p
+            font-size .7em
+            margin-left 30%
+            
+            &.author
+                display inline-block
+                left 0 
+                
+            &.rights-reserved
+                padding-left 2em 
+                line-height 5
+                bottom 0
+                left 0
+                display inline-block
+                
+    +mobile()
+        p
+            margin-left 20%
+            
+            &.rights-reserved
+                padding-left 0 
+                margin-left 3.5em
+                
+            &.author
+                margin-left 3% 
+                text-align center
+
+        .copyright
+            display none
